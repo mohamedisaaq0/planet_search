@@ -1,0 +1,51 @@
+
+Planet Search Tool - Test Results
+
+Test 1: Asking about mass
+What I am testing: Making sure the program can find the mass of a planet if I ask about it.
+What I typed: How massive is Neptune?
+What I expected to see: It should print out Neptune's mass from the text file.
+What actually happened: Printed The mass of Neptune is 1.02e26 kg.
+Result: Pass
+
+Test 2: Asking about moons
+What I am testing: Checking if it recognises the word moon and gives the right data.
+What I typed: How many moons does Earth have?
+What I expected to see: It should tell me Earth has The Moon.
+What actually happened: Printed Earth has these moons: The Moon.
+Result: Pass
+
+Test 3: Asking for all the data at once
+What I am testing: Testing the everything keyword to see all stats for one planet.
+What I typed: Tell me everything about Saturn?
+What I expected to see: A list showing the mass, distance, and moons for Saturn.
+What actually happened: Printed Here is everything about Saturn: followed by the 3 stats.
+Result: Pass
+
+Test 4: Just checking if a planet exists
+What I am testing: Seeing what happens if I mention a planet but do not ask for a specific stat like mass or distance.
+What I typed: Is Mars in the list?
+What I expected to see: The generic fallback message saying it found it.
+What actually happened: Printed Yep, Mars is saved in the file.
+Result: Pass
+
+Test 5: Searching for a fake planet
+What I am testing: Making sure the program does not crash if it cannot find a match.
+What I typed: Tell me about Krypton
+What I expected to see: An error message saying Planet not found, try again.
+What actually happened: Printed Planet not found, try again.
+Result: Pass
+
+Test 6: Pressing enter by mistake
+What I am testing: Checking my input validation to stop empty strings breaking the code.
+What I typed: I just pressed the Enter key with no text.
+What I expected to see: It should warn me to type a real question.
+What actually happened: Printed Invalid input. Please type a question.
+Result: Pass
+
+Test 7: Closing the program
+What I am testing: Making sure the exit command breaks the while loop.
+What I typed: exit
+What I expected to see: The program should print Done and close.
+What actually happened: Printed Done. and stopped running.
+Result: pass
