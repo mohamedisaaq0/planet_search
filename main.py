@@ -32,3 +32,50 @@ for line_data in saved_lines:
             # create object and append to list
             p_data = Planet(n, m, d, moons)
             all_planets.append(p_data)
+
+while running == 1:
+    print("\nAsk a question about a planet (or enter exit)")
+    search_val = input("Question: ")
+    
+    # input validation so it doesnt crash on empty strings
+    if search_val.strip() == "":
+        print("Invalid input. Please type a question.")
+        continue
+    
+    # check if user wants to quit
+    if search_val.lower() == "exit":
+        running = 0
+        print("Done.")
+    else:
+        match_found = 0 # flag to check if we find a planet match
+        
+        # I was stuck on how to make the program read full sentences instead of just single words.
+        # I used an AI to help me debug this loop and it showed me how to use .lower() and 'in'.
+        for p_item in all_planets:
+            # chekcing for the planet in their question
+            if p_item.name.lower() in search_val.lower():
+                match_found = 1
+                
+                # looking for keywords in their question to figure out what they want to know
+                if "mass" in search_val.lower() or "massive" in search_val.lower():
+                    print("The mass of " + p_item.name + " is " + p_item.mass)
+                    
+                elif "moon" in search_val.lower():
+                    print(p_item.name + " has these moons: " + p_item.moons)
+                    
+                elif "distance" in search_val.lower() or "far" in search_val.lower():
+                    print(p_item.name + " is " + p_item.distance + " from the sun")
+                    
+                elif "everything" in search_val.lower() or "about" in search_val.lower():
+                    print("Here is everything about " + p_item.name + ":")
+                    print("- Mass: " + p_item.mass)
+                    print("- Distance: " + p_item.distance)
+                    print("- Moons: " + p_item.moons)
+                    
+                else:
+                    # fallback if they just type the planet name or ask if it is in the list
+                    print("Yep, " + p_item.name + " is a planet in the list.")
+                    
+        # if loop finishes and flag is unchanged then theyre asking about a missing planet
+        if match_found == 0:
+            print("Planet not found, try again.")
