@@ -1,0 +1,4 @@
+Name: Earth | Mass: 5.97e24 kg | Dist: 149.6m km | Moons: The Moon
+Name: Saturn | Mass: 5.68e26 kg | Dist: 1.4b km | Moons: Titan, Enceladus, Rhea, Dione, Iapetus
+Name: Neptune | Mass: 1.02e26 kg | Dist: 4.5b km | Moons: Triton, Nereid, Proteus
+Name: Mars | Mass: 6.39e23 kg | Dist: 227.9m km | Moons: Phobos, Deimos
