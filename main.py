@@ -33,6 +33,8 @@ for line_data in saved_lines:
             p_data = Planet(n, m, d, moons)
             all_planets.append(p_data)
 
+running = 1
+
 while running == 1:
     print("\nAsk a question about a planet (or enter exit)")
     search_val = input("Question: ")
